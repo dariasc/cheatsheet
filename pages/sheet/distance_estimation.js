@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import Keybind from '../components/keybind';
-import styles from '../styles/DistanceEstimation.module.css'
+import Keybind from '../../components/keybind';
+import styles from '../../styles/sheet/DistanceEstimation.module.css'
 
 let distance = [
     {angle: 0.5, dist: 2000},
@@ -48,7 +48,7 @@ export default function DistanceEstimation() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.headings}>
+      <div className={styles.headers}>
         <span className={styles.active}>
             {type === "overworld" ? overworld : nether}
         </span>

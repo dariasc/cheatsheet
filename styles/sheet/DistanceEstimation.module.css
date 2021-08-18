@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
-
+/* Headers */
 .container h1 {
     margin-block: 0;
 }
@@ -24,19 +23,11 @@
     color: #e7a0a0
 }
 
-.keybind {
-    margin-top: 32px;
-}
-
-.keybind span {
-    font-family: 'Roboto Mono', monospace;
-    font-size: .7rem;
-}
-
-.headings {
+.headers {
     margin-bottom: 32px;
 }
 
+/* Table */
 .table {
     font-size: 1.2em;
     width: 400px;
@@ -60,4 +51,14 @@
 
 .table tbody tr:hover {
     background-color: #141414;
+}
+
+/* Keybindings */
+.keybind {
+    margin-top: 32px;
+}
+
+.keybind span {
+    font-family: 'Roboto Mono', monospace;
+    font-size: .7rem;
 }

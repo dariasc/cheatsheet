@@ -1,0 +1,24 @@
+/* Table */
+.table {
+    font-size: 1.2em;
+    width: 400px;
+    border-collapse: collapse;
+}
+
+.table thead {
+    border-bottom: 1px solid white;
+}
+
+.table th {
+    padding: 8px;
+}
+
+.table td {
+    padding: 6px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.table tbody tr:hover {
+    background-color: #141414;
+}
