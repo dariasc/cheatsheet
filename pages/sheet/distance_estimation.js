@@ -60,7 +60,7 @@ export default function DistanceEstimation() {
       <table className={styles.table}>
         <thead>
           <tr>
-            <th>∠</th>
+            <th>ϑ</th>
             <th>Δ</th>
           </tr>
         </thead>

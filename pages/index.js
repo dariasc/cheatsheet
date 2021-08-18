@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import DistanceEstimation from './sheet/distance_estimation'
 import Rings from './sheet/rings'
+import Blind from './sheet/blind'
 import styles from '../styles/Home.module.css'
 
 const sheets = {
@@ -16,6 +17,10 @@ const sheets = {
   'rings': {
     'code': 'KeyR',
     'element': <Rings/>
+  },
+  'blind': {
+    'code': 'KeyB',
+    'element': <Blind/>
   }
 }
 

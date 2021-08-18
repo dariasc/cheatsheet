@@ -1,30 +1,5 @@
-/* Headers */
 .container h1 {
-    margin-block: 0;
-}
-
-.active {
-    font-size: 1.5em;
-}
-
-.active h1 {
-    display: inline-block;
-}
-
-.inactive {
-    font-size: 0.7em;
-}
-
-.overworld {
     color: #b4ecb4;
-}
-
-.nether {
-    color: #e7a0a0
-}
-
-.headers {
-    margin-bottom: 32px;
 }
 
 /* Table */
@@ -56,6 +31,10 @@
 /* Keybindings */
 .keybind {
     margin-top: 32px;
+}
+
+.keybind div {
+    margin-bottom: 2px;
 }
 
 .keybind span {
