@@ -1,17 +1,21 @@
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
+
+import Guide from './guide'
 import DistanceEstimation from './sheet/distance_estimation'
 import Rings from './sheet/rings'
 import Blind from './sheet/blind'
+import Divine from './sheet/divine'
+
 import styles from '../styles/Home.module.css'
 
 const sheets = {
   'help': {
     'code': 'Escape',
-    'element': <div/>
+    'element': <Guide/>
   },
   'distance_estimation': {
-    'code': 'KeyD',
+    'code': 'KeyE',
     'element': <DistanceEstimation/>
   },
   'rings': {
@@ -21,6 +25,10 @@ const sheets = {
   'blind': {
     'code': 'KeyB',
     'element': <Blind/>
+  },
+  'divine': {
+    'code': 'KeyD',
+    'element': <Divine/>
   }
 }
 

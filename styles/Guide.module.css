@@ -1,0 +1,17 @@
+.container h1 {
+    font-size: 4rem;
+}
+
+.keybind kbd {
+    font-size: 1.6rem;
+}
+
+.keybind span {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+.keybind div {
+    margin-bottom: 20px;
+}

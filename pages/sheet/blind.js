@@ -82,13 +82,13 @@ export default function Blind() {
       </table>
       <div className={styles.keybind}>
         <div>
-          <Keybind content="1"/> <span> - set to first ring</span>
+          <Keybind content="1"/> <span>- set to first ring</span>
         </div>
         <div>
-          <Keybind content="2"/> <span> - set to second ring</span>      
+          <Keybind content="2"/> <span>- set to second ring</span>      
         </div>
         <div>
-          <Keybind content="3"/> <span> - set to third ring</span>
+          <Keybind content="3"/> <span>- set to third ring</span>
         </div>
       </div>
     </div>

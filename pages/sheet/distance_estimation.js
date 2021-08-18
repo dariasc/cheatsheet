@@ -77,7 +77,7 @@ export default function DistanceEstimation() {
         </tbody>
       </table>
       <div className={styles.keybind} >
-        <Keybind content="space" /> <span>- change dimension</span>
+        <Keybind content="space"/> <span>- change dimension</span>
       </div>
     </div>
   )
