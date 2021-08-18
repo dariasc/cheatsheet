@@ -61,7 +61,8 @@ export default function Blind() {
 
   return (
     <div className={styles.container}>
-      <h1>blind | {ring} ⬤</h1>
+      <h1 className={styles.name}>blind</h1>
+      <h1>{ring} ring</h1>
 
       <table className={styles.table}>
         <thead>

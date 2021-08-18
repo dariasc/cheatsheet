@@ -34,7 +34,8 @@ export default function Triangulation() {
 
   return (
     <div className={styles.container}>
-      <h1>triangulation | {type}</h1>
+      <h1 className={styles.name}>triangulation</h1>
+      <h1>{type}</h1>
 
       <table className={styles.table}>
         <thead>
