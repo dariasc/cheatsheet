@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+
+.container h1 {
+    margin-block: 0;
+}
+
+.active {
+    font-size: 1.5em;
+}
+
+.active h1 {
+    display: inline-block;
+}
+
+.inactive {
+    font-size: 0.7em;
+}
+
+.overworld {
+    color: #b4ecb4;
+}
+
+.nether {
+    color: #e7a0a0
+}
+
+.keybind {
+    margin-top: 32px;
+}
+
+.keybind span {
+    font-family: 'Roboto Mono', monospace;
+    font-size: .7rem;
+}
+
+.headings {
+    margin-bottom: 32px;
+}
+
+.table {
+    font-size: 1.2em;
+    width: 400px;
+    border-collapse: collapse;
+}
+
+.table thead {
+    border-bottom: 1px solid white;
+}
+
+.table th {
+    padding: 8px;
+}
+
+.table td {
+    padding: 6px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    width: 50%;
+}
+
+.table tbody tr:hover {
+    background-color: #141414;
+}
