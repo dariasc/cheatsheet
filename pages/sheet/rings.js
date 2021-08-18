@@ -1,10 +1,10 @@
-import sheets from '../../styles/Sheet.module.css'
+import sheets from '../../styles/Sheet.module.css';
 
-let rings = [
-  {quantity: 3, inner: 1280, outer: 2816},
-  {quantity: 6, inner: 4352, outer: 5888},
-  {quantity: 10, inner: 7424, outer: 8960}
-]
+const rings = [
+  { quantity: 3, inner: 1280, outer: 2816 },
+  { quantity: 6, inner: 4352, outer: 5888 },
+  { quantity: 10, inner: 7424, outer: 8960 }
+];
 
 export default function Rings() {
   return (

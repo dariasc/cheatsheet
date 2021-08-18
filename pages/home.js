@@ -1,7 +1,7 @@
 import Keybind from '../components/keybind';
-import styles from '../styles/Guide.module.css'
+import styles from '../styles/Home.module.css';
 
-export default function Guide() {
+export default function Home() {
   return (
     <div>
       <h1 className={styles.title}>cheat_sheet</h1>

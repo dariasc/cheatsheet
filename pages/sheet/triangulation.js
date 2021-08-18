@@ -1,29 +1,40 @@
 import { useEffect, useState } from 'react';
 import Keybind from '../../components/keybind';
-import styles from '../../styles/sheet/Triangulation.module.css'
-import sheets from '../../styles/Sheet.module.css'
+import styles from '../../styles/sheet/Triangulation.module.css';
+import sheets from '../../styles/Sheet.module.css';
 
-let distance = [
-    {angle: 0.5, dist: 2000},
-    {angle: 1.0, dist: 1000},
-    {angle: 1.5, dist: 665},
-    {angle: 2.0, dist: 500},
-    {angle: 2.5, dist: 400},
-    {angle: 3.0, dist: 335},
-    {angle: 3.5, dist: 285},
-    {angle: 4.0, dist: 250},
-    {angle: 4.5, dist: 220},
-    {angle: 5.0, dist: 200}
-]
+const distance = [
+  {angle: 0.5, dist: 2000},
+  {angle: 1.0, dist: 1000},
+  {angle: 1.5, dist: 665},
+  {angle: 2.0, dist: 500},
+  {angle: 2.5, dist: 400},
+  {angle: 3.0, dist: 335},
+  {angle: 3.5, dist: 285},
+  {angle: 4.0, dist: 250},
+  {angle: 4.5, dist: 220},
+  {angle: 5.0, dist: 200}
+];
+
+const dimensions = {
+  overworld: {
+    factor: 1,
+    next: 'nether'
+  },
+  nether: {
+    factor: 8,
+    next: 'overworld'
+  }
+};
 
 export default function Triangulation() {
-  const [type, setType] = useState('overworld');
+  const [active, setActive] = useState('overworld');
 
   useEffect(() => {
     const handleSpace = event => {
       const { code } = event;
       if (code === 'Space') {
-        setType(type === 'overworld' ? 'nether' : 'overworld');
+        setActive(dimensions[active].next);
       }
     }
 
@@ -31,12 +42,13 @@ export default function Triangulation() {
     return () => {
       document.removeEventListener('keydown', handleSpace);
     }
-  })
+  });
 
+  const { factor } = dimensions[active];
   return (
     <div className={sheets.container}>
       <h1 className={sheets.title}>triangulation</h1>
-      <h1>{type}</h1>
+      <h1>{active}</h1>
 
       <table className={`${sheets.table} ${styles.table}`}>
         <thead>
@@ -50,15 +62,14 @@ export default function Triangulation() {
           {distance.map((row, index) => 
             <tr key={index}>
               <td>{row.angle.toFixed(1)}</td>
-              <td>
-                {type === "overworld" ? row.dist : Math.floor(row.dist/8)}
-              </td>
+              <td>{Math.floor(row.dist / factor)}</td>
             </tr>
           )}
         </tbody>
       </table>
-      <div className={sheets.keybinds} >
-        <Keybind content="space"/> <span>- change dimension</span>
+
+      <div className={sheets.keybinds}>
+        <Keybind content="space"/> <span>- {dimensions[active].next}</span>
       </div>
     </div>
   )

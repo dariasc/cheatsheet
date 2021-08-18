@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import Keybind from '../../components/keybind';
 
-import styles from '../../styles/sheet/Blind.module.css'
-import sheets from '../../styles/Sheet.module.css'
+import styles from '../../styles/sheet/Blind.module.css';
+import sheets from '../../styles/Sheet.module.css';
 
 const rings = {
-  'first': {
-    'code': 'Digit1',
-    'coordinates': [
+  first: {
+    code: 'Digit1',
+    coordinates: [
       {x: 0, y: 220},
       {x: 50, y: 210},
       {x: 75, y: 200},
@@ -16,9 +16,9 @@ const rings = {
       {x: 155, y: 155}
     ]
   },
-  'second': {
-    'code': 'Digit2',
-    'coordinates': [
+  second: {
+    code: 'Digit2',
+    coordinates: [
       {x: 0, y: 620},
       {x: 100, y: 610},
       {x: 150, y: 600},
@@ -29,9 +29,9 @@ const rings = {
       {x: 435, y: 435}
     ]
   },
-  'third': {
-    'code': 'Digit3',
-    'coordinates': [
+  third: {
+    code: 'Digit3',
+    coordinates: [
       {x: 0, y: 1010},
       {x: 200, y: 990},
       {x: 300, y: 965},
@@ -41,7 +41,7 @@ const rings = {
       {x: 715, y: 715}
     ]
   }
-}
+};
 
 export default function Blind() {
   const [ring, setRing] = useState('first');
@@ -55,11 +55,11 @@ export default function Blind() {
       }
     }
 
-    document.addEventListener("keydown", handleKeybind);
+    document.addEventListener('keydown', handleKeybind);
     return () => {
-      document.removeEventListener("keydown", handleKeybind);
+      document.removeEventListener('keydown', handleKeybind);
     }
-  })
+  });
 
   return (
     <div className={sheets.container}>
@@ -75,23 +75,24 @@ export default function Blind() {
         </thead>
 
         <tbody>
-          {rings[ring].coordinates.map(row => 
-            <tr key={`${row.x},${row.y}`}>
+          {rings[ring].coordinates.map((row, index) => 
+            <tr key={index}>
               <td>{row.x}</td>
               <td>{row.y}</td>
             </tr>
           )}
         </tbody>
       </table>
+
       <div className={sheets.keybinds}>
         <div>
-          <Keybind content="1"/> <span>- set to first ring</span>
+          <Keybind content="1"/> <span>- first ring</span>
         </div>
         <div>
-          <Keybind content="2"/> <span>- set to second ring</span>      
+          <Keybind content="2"/> <span>- second ring</span>      
         </div>
         <div>
-          <Keybind content="3"/> <span>- set to third ring</span>
+          <Keybind content="3"/> <span>- third ring</span>
         </div>
       </div>
     </div>
