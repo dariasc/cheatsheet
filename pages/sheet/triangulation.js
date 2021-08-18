@@ -38,7 +38,7 @@ export default function Triangulation() {
       <h1 className={sheets.title}>triangulation</h1>
       <h1>{type}</h1>
 
-      <table className={styles.table}>
+      <table className={`${sheets.table} ${styles.table}`}>
         <thead>
           <tr>
             <th>ϑ</th>

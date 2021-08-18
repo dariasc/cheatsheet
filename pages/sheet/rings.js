@@ -1,4 +1,3 @@
-import styles from '../../styles/sheet/Rings.module.css'
 import sheets from '../../styles/Sheet.module.css'
 
 let rings = [
@@ -13,7 +12,7 @@ export default function Rings() {
       <h1 className={sheets.title}>stronghold rings</h1>
       <h1>size</h1>
 
-      <table className={styles.table}>
+      <table className={sheets.table}>
         <thead>
           <tr>
             <th>#</th>

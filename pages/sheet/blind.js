@@ -66,7 +66,7 @@ export default function Blind() {
       <h1 className={sheets.title}>blind</h1>
       <h1>{ring} ring</h1>
 
-      <table className={styles.table}>
+      <table className={`${sheets.table} ${styles.table}`}>
         <thead>
           <tr>
             <th>x</th>

@@ -49,7 +49,7 @@ const divine = {
 
 function coordinateTable(coordinates) {
   return (
-    <table className={styles.table}>
+    <table className={`${sheets.table} ${styles.table}`}>
       <thead>
         <tr>
           <th>#</th>
