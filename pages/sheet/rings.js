@@ -9,7 +9,7 @@ let rings = [
 export default function Rings() {
   return (
     <div className={styles.container}>
-      <h1>rings</h1>
+      <h1>stronghold rings</h1>
 
       <table className={styles.table}>
         <thead>

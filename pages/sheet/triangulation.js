@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Keybind from '../../components/keybind';
-import styles from '../../styles/sheet/DistanceEstimation.module.css'
+import styles from '../../styles/sheet/Triangulation.module.css'
 
 let distance = [
     {angle: 0.5, dist: 2000},
@@ -15,47 +15,26 @@ let distance = [
     {angle: 5.0, dist: 200}
 ]
 
-let overworld = <h1 className={styles.overworld}>overworld</h1>
-let nether = <h1 className={styles.nether}>nether</h1>
-
-let flipType = (type) => {
-  switch (type) {
-    case "overworld":
-      return "nether";
-    case "nether":
-      return "overworld";
-    default:
-      throw 'Invalid type'
-  }
-}
-
-export default function DistanceEstimation() {
-  const [type, setType] = useState("overworld");
+export default function Triangulation() {
+  const [type, setType] = useState('overworld');
 
   useEffect(() => {
     const handleSpace = event => {
       const { code } = event;
-      if (code === "Space") {
-        setType(flipType(type));
+      if (code === 'Space') {
+        setType(type === 'overworld' ? 'nether' : 'overworld');
       }
     }
 
-    document.addEventListener("keydown", handleSpace);
+    document.addEventListener('keydown', handleSpace);
     return () => {
-      document.removeEventListener("keydown", handleSpace);
+      document.removeEventListener('keydown', handleSpace);
     }
   })
 
   return (
     <div className={styles.container}>
-      <div className={styles.headers}>
-        <span className={styles.active}>
-            {type === "overworld" ? overworld : nether}
-        </span>
-        <span className={styles.inactive}>
-            {type === "overworld" ? nether : overworld}
-        </span>
-      </div>
+      <h1>triangulation | {type}</h1>
 
       <table className={styles.table}>
         <thead>
@@ -66,8 +45,8 @@ export default function DistanceEstimation() {
         </thead>
 
         <tbody>
-          {distance.map(row => 
-            <tr key={row.angle}>
+          {distance.map((row, index) => 
+            <tr key={index}>
               <td>{row.angle.toFixed(1)}</td>
               <td>
                 {type === "overworld" ? row.dist : Math.floor(row.dist/8)}

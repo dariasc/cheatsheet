@@ -1,36 +1,11 @@
-/* Headers */
 .container h1 {
-    margin-block: 0;
-}
-
-.active {
-    font-size: 1.5em;
-}
-
-.active h1 {
-    display: inline-block;
-}
-
-.inactive {
-    font-size: 0.7em;
-}
-
-.overworld {
     color: #b4ecb4;
-}
-
-.nether {
-    color: #e7a0a0
-}
-
-.headers {
-    margin-bottom: 32px;
 }
 
 /* Table */
 .table {
     font-size: 1.2em;
-    width: 400px;
+    width: 450px;
     border-collapse: collapse;
     text-align: center;
     font-family: 'Roboto Mono', monospace;

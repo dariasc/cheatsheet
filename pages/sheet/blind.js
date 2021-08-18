@@ -10,7 +10,7 @@ const rings = {
       {x: 50, y: 210},
       {x: 75, y: 200},
       {x: 100, y: 190},
-      {x: 125, y: 176},
+      {x: 125, y: 175},
       {x: 155, y: 155}
     ]
   },
@@ -61,7 +61,7 @@ export default function Blind() {
 
   return (
     <div className={styles.container}>
-      <h1>{ring} ⬤</h1>
+      <h1>blind | {ring} ⬤</h1>
 
       <table className={styles.table}>
         <thead>

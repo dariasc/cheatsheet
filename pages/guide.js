@@ -11,7 +11,7 @@ export default function Guide() {
           <Keybind content="b"/> <span> - blind coordinates</span>
         </div>
         <div>
-          <Keybind content="e"/> <span> - distance estimation</span>
+          <Keybind content="t"/> <span> - triangulation</span>
         </div>
         <div>
           <Keybind content="r"/> <span> - ring sizes</span>

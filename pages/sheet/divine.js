@@ -25,7 +25,6 @@ const divine = {
   },
   'high_roll': {
     'coordinates': [
-      
     ]
   }
 };
@@ -49,7 +48,7 @@ export default function Divine() {
 
   return (
     <div className={styles.container}>
-      <h1>divine {type}</h1>
+      <h1>divine | {type}</h1>
 
       <table className={styles.table}>
         <thead>

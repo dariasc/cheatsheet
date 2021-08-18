@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 
 import Guide from './guide'
-import DistanceEstimation from './sheet/distance_estimation'
+import Triangulation from './sheet/triangulation'
 import Rings from './sheet/rings'
 import Blind from './sheet/blind'
 import Divine from './sheet/divine'
@@ -14,9 +14,9 @@ const sheets = {
     'code': 'Escape',
     'element': <Guide/>
   },
-  'distance_estimation': {
-    'code': 'KeyE',
-    'element': <DistanceEstimation/>
+  'triangulation': {
+    'code': 'KeyT',
+    'element': <Triangulation/>
   },
   'rings': {
     'code': 'KeyR',
@@ -59,11 +59,6 @@ export default function Home() {
       </Head>
 
       {sheets[active].element}
-
-      {/*}
-      <footer className={styles.footer}>
-
-      </footer>*/}
     </div>
   )
 }
