@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react';
+
 import Keybind from '../../components/keybind';
-import styles from '../../styles/sheet/Divine.module.css'
 import Fossil from '../../components/fossil';
+
 import fossils from './fossils.json'
+
+import styles from '../../styles/sheet/Divine.module.css'
+import sheets from '../../styles/Sheet.module.css'
 
 const divine = {
   'normal': [
@@ -108,13 +112,13 @@ export default function Divine() {
   })
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.name}>divine</h1>
+    <div className={sheets.container}>
+      <h1 className={sheets.title}>divine</h1>
       <h1>{active}</h1>
 
       {render[active].element}
 
-      <div className={styles.keybind} >
+      <div className={sheets.keybinds} >
         <Keybind content="space"/> <span>- {render[active].next}</span>
       </div>
     </div>

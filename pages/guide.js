@@ -3,8 +3,8 @@ import styles from '../styles/Guide.module.css'
 
 export default function Guide() {
   return (
-    <div className={styles.container}>
-      <h1>cheat_sheet</h1>
+    <div>
+      <h1 className={styles.title}>cheat_sheet</h1>
       
       <div className={styles.keybind}>
         <div>

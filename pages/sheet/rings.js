@@ -1,15 +1,16 @@
 import styles from '../../styles/sheet/Rings.module.css'
+import sheets from '../../styles/Sheet.module.css'
 
 let rings = [
-    {quantity: 3, inner: 1280, outer: 2816},
-    {quantity: 6, inner: 4352, outer: 5888},
-    {quantity: 10, inner: 7424, outer: 8960}
+  {quantity: 3, inner: 1280, outer: 2816},
+  {quantity: 6, inner: 4352, outer: 5888},
+  {quantity: 10, inner: 7424, outer: 8960}
 ]
 
 export default function Rings() {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.name}>stronghold rings</h1>
+    <div className={sheets.container}>
+      <h1 className={sheets.title}>stronghold rings</h1>
       <h1>size</h1>
 
       <table className={styles.table}>

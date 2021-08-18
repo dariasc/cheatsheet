@@ -1,0 +1,13 @@
+.box {
+  background: white;
+  color: #121212;
+
+  padding: .1rem .3rem;
+  margin: 3px 0;
+  border-radius: .15rem;
+
+  line-height: .7rem;
+  font-size: .7rem;
+  font-weight: bold;
+  font-family: 'Robot Mono', monospace;
+}

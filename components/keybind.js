@@ -1,4 +1,4 @@
-import styles from '../styles/Keybind.module.css'
+import styles from '../styles/components/Keybind.module.css'
 
 export default function Keybind(props) {
   return (

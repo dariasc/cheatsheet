@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { PerspectiveCamera, Vector3 } from 'three'
+import React, { useRef } from 'react'
+import { Canvas } from '@react-three/fiber'
+import { PerspectiveCamera } from 'three'
 
 function Cube(props) {
   // This reference will give us direct access to the mesh
@@ -20,7 +20,7 @@ export default function Fossil(props) {
   let camera = new PerspectiveCamera(60, 1, 0.1, 1000);
   // @todo: add distance property to each fossil
   camera.position.x = 5;
-  camera.position.y = 5;
+  camera.position.y = 7;
   camera.position.z = 5;
 
   // @todo: this works, but its ugly af, clean this
@@ -32,11 +32,6 @@ export default function Fossil(props) {
     }
   });
 
-  console.log([
-    (limits[0][1]-limits[0][0])/2 + limits[0][0], 
-    (limits[1][1]-limits[1][0])/2 + limits[1][0],
-    (limits[2][1]-limits[2][0])/2 + limits[2][0]]
-  );
   camera.lookAt(
     (limits[0][1]-limits[0][0])/2 + limits[0][0], 
     (limits[1][1]-limits[1][0])/2 + limits[1][0],

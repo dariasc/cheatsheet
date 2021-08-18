@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import Keybind from '../../components/keybind';
+
 import styles from '../../styles/sheet/Blind.module.css'
+import sheets from '../../styles/Sheet.module.css'
 
 const rings = {
   'first': {
@@ -60,8 +62,8 @@ export default function Blind() {
   })
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.name}>blind</h1>
+    <div className={sheets.container}>
+      <h1 className={sheets.title}>blind</h1>
       <h1>{ring} ring</h1>
 
       <table className={styles.table}>
@@ -81,7 +83,7 @@ export default function Blind() {
           )}
         </tbody>
       </table>
-      <div className={styles.keybind}>
+      <div className={sheets.keybinds}>
         <div>
           <Keybind content="1"/> <span>- set to first ring</span>
         </div>

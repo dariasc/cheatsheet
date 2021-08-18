@@ -1,14 +1,3 @@
-.container > h1 {
-    margin-block-start: 0;
-}
-
-.name {
-    font-size: .9rem;
-    font-weight: normal;
-    margin-block-end: 0;
-    font-family: 'Roboto Mono';
-}
-
 /* Table */
 .table {
     font-size: 1.2em;

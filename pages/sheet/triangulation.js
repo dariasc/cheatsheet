@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Keybind from '../../components/keybind';
 import styles from '../../styles/sheet/Triangulation.module.css'
+import sheets from '../../styles/Sheet.module.css'
 
 let distance = [
     {angle: 0.5, dist: 2000},
@@ -33,8 +34,8 @@ export default function Triangulation() {
   })
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.name}>triangulation</h1>
+    <div className={sheets.container}>
+      <h1 className={sheets.title}>triangulation</h1>
       <h1>{type}</h1>
 
       <table className={styles.table}>
@@ -56,7 +57,7 @@ export default function Triangulation() {
           )}
         </tbody>
       </table>
-      <div className={styles.keybind} >
+      <div className={sheets.keybinds} >
         <Keybind content="space"/> <span>- change dimension</span>
       </div>
     </div>
